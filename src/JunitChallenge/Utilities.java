@@ -26,25 +26,26 @@ public class Utilities {
 	// "ABCBDEEF"-> "ABCBDEF"
 	public String removePairs(String source) {
 
-		if (source.length() < 2) {
+		if (source == null || source.length() < 2) {
 			return source;
 		}
 
 		StringBuilder sb = new StringBuilder();
 		char[] string = source.toCharArray();
 
-		sb.append(string[0]);
 
-		for (int i = 1; i < string.length; i++) {
-			if (string[i] != string[i - 1]) {
+		for (int i = 0; i < string.length - 1; i++) {
+			if (string[i] != string[i + 1]) {
 				sb.append(string[i]);
 			}
 		}
+
+		sb.append(string[string.length - 1]);
 		return sb.toString();
 	}
 
 	//perform a conversion based on some internal business rule
-	public int converter(int a, int b) {
+	public int converter(int a, int b) throws ArithmeticException {
 		return (a / b) + (a * 30) - 2;
 	}
 

@@ -6,6 +6,8 @@ public class Main {
 
 		Utilities utilities = new Utilities();
 
-		System.out.println(utilities.removePairs("ABBCDEEF"));
+//		System.out.println(utilities.removePairs("ABBCDEEF"));
+		char[] charArray = {'h', 'e', 'l', 'l', 'o'};
+		System.out.println(utilities.everyNthChar(charArray, 2));
 	}
 }
